@@ -1,13 +1,73 @@
-# AWS EC2 + S3 + Route 53 Web App
-# aws-ec2-s3-route53-webapp
+# 🚀 Static Website Deployment on AWS (S3 + Route 53 + CloudFront + HTTPS)
 
-A basic full-stack web deployment on AWS using EC2, S3 static site, and Route 53.
+🔗 **Live Demo:** [https://www.deployjimmy.com](https://www.deployjimmy.com)
+
+This project demonstrates a secure and scalable static website deployment on AWS. The site is hosted on Amazon S3, delivered globally via CloudFront, and protected with HTTPS using AWS Certificate Manager. Domain management and routing are handled through Route 53.
 
 ---
 
-## Architecture Diagram
+## ✅ Highlights
 
-This project uses AWS services to host a static website (S3) with optional backend capabilities (EC2), routed through Route 53. IAM and Security Group configurations are attached to the EC2 instance for access and protection.
+- 📦 **Amazon S3** – Static website hosting with public read-only access  
+- 🌐 **Route 53** – Custom domain routing for `www.deployjimmy.com`  
+- 🔒 **CloudFront + ACM** – CDN and SSL for secure, low-latency global access  
+- ⚙️ **Manual AWS Deployment** – Built step-by-step for full understanding  
+- 🧭 **DNS Resolution** – Alias A-record points to CloudFront  
 
-![AWS Architecture](architecture/aws-ec2-s3-route53.png)
+---
 
+## 📁 Project Structure
+
+```bash
+aws-ec2-s3-route53-webapp/
+├── architecture/                  # AWS architecture diagram (PNG)
+├── index.html                     # Static website content
+├── error.html                     # Custom error page (optional)
+├── LICENSE
+└── README.md
+```
+
+---
+
+## 🗺️ Architecture Overview
+
+![Architecture Diagram](architecture/aws-ec2-s3-route53.png)
+
+---
+
+## 🛠 Deployment Summary
+
+1. Created and configured an S3 bucket named `www.deployjimmy.com`  
+2. Enabled static website hosting and uploaded `index.html` and `error.html`  
+3. Registered domain and created hosted zone via Route 53  
+4. Requested and validated an SSL certificate using ACM  
+5. Created CloudFront distribution pointing to the S3 static site endpoint  
+6. Connected domain to CloudFront via Route 53 Alias A-record  
+7. Verified HTTPS functionality and global access  
+
+---
+
+## 🧠 Skills Demonstrated
+
+- AWS service integration (S3, Route 53, CloudFront, ACM)  
+- DNS routing and SSL management  
+- Static site deployment using best practices  
+- Secure public access configuration  
+- CDN-enabled performance optimization  
+
+---
+
+## 🚧 Next Steps
+
+- [ ] Add EC2 backend for dynamic API functionality  
+- [ ] Connect `api.deployjimmy.com` to EC2  
+- [ ] Integrate monitoring with CloudWatch  
+- [ ] Automate infrastructure (Terraform – later)  
+
+---
+
+## 👤 Author
+
+**Jimmy Peralta**  
+🛠️ Systems Support Engineer | ☁️ AWS Cloud Enthusiast  
+🌐 [https://www.deployjimmy.com](https://www.deployjimmy.com)
