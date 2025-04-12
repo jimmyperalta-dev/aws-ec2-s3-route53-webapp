@@ -47,6 +47,18 @@ aws-ec2-s3-route53-webapp/
 
 ---
 
+## 🔧 Backend API (EC2 + Node.js)
+
+In addition to the static frontend hosted on S3, this project includes a live backend API hosted on an EC2 instance.
+
+- Built with **Node.js** and hosted on **Amazon EC2**
+- Accessible through a private IP (to be mapped to `api.deployjimmy.com`)
+- Returns a JSON response to demonstrate backend capability
+- Managed by **PM2** to ensure persistent uptime
+- Secured with custom **Security Group** rules to control traffic
+
+---
+
 ## 🧠 Skills Demonstrated
 
 - AWS service integration (S3, Route 53, CloudFront, ACM)  
