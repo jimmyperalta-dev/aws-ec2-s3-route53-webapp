@@ -1,18 +1,19 @@
 # 🚀 Static Website Deployment on AWS (S3 + Route 53 + CloudFront + HTTPS)
 
-🔗 **Live Demo:** [https://www.deployjimmy.com](https://www.deployjimmy.com)
+🔗 **Live Demo:** [https://www.deployjimmy.com](https://www.deployjimmy.com)  
+🔗 **API Endpoint:** [https://api.deployjimmy.com/api](https://api.deployjimmy.com/api)
 
-This project demonstrates a secure and scalable static website deployment on AWS. The site is hosted on Amazon S3, delivered globally via CloudFront, and protected with HTTPS using AWS Certificate Manager. Domain management and routing are handled through Route 53.
+This project demonstrates a secure and scalable static website and backend API deployment on AWS. The static site is hosted on Amazon S3, delivered globally via CloudFront, and protected with HTTPS using AWS Certificate Manager. Domain routing is handled through Route 53. The backend is hosted on EC2 and secured via a separate CloudFront distribution.
 
 ---
 
 ## ✅ Highlights
 
 - 📦 **Amazon S3** – Static website hosting with public read-only access  
-- 🌐 **Route 53** – Custom domain routing for `www.deployjimmy.com`  
-- 🔒 **CloudFront + ACM** – CDN and SSL for secure, low-latency global access  
+- 💻 **Amazon EC2** – Node.js backend API hosted on port 3000  
+- 🔒 **CloudFront + ACM** – CDN and SSL for secure, low-latency access  
+- 🌐 **Route 53** – DNS routing for both frontend and backend  
 - ⚙️ **Manual AWS Deployment** – Built step-by-step for full understanding  
-- 🧭 **DNS Resolution** – Alias A-record points to CloudFront  
 
 ---
 
@@ -37,44 +38,39 @@ aws-ec2-s3-route53-webapp/
 
 ## 🛠 Deployment Summary
 
-1. Created and configured an S3 bucket named `www.deployjimmy.com`  
-2. Enabled static website hosting and uploaded `index.html` and `error.html`  
-3. Registered domain and created hosted zone via Route 53  
-4. Requested and validated an SSL certificate using ACM  
-5. Created CloudFront distribution pointing to the S3 static site endpoint  
-6. Connected domain to CloudFront via Route 53 Alias A-record  
-7. Verified HTTPS functionality and global access  
+### 🌐 Frontend (Static Site)
+
+1. Created and configured an S3 bucket named `www.deployjimmy.com`
+2. Enabled static website hosting and uploaded `index.html` and `error.html`
+3. Requested and validated an SSL certificate using ACM
+4. Created CloudFront distribution pointing to the S3 website endpoint
+5. Connected domain to CloudFront via Route 53 Alias A-record
+6. Verified global HTTPS access to the static site
+
+### 🔧 Backend API
+
+1. Launched EC2 instance with Node.js backend (port 3000)
+2. Configured security group and PM2 for uptime
+3. Created ACM certificate for `api.deployjimmy.com`
+4. Created CloudFront distribution pointing to EC2 on port 3000
+5. Configured Route 53 A-record (alias) to point `api.deployjimmy.com` to CloudFront
+6. Confirmed secure API delivery via HTTPS
 
 ---
 
-## 🔧 Backend API (EC2 + Node.js)
+## 🔗 Live Backend Endpoint
 
-In addition to the static frontend hosted on S3, this project includes a live backend API hosted on an EC2 instance.
-
-- Built with **Node.js** and hosted on **Amazon EC2**
-- Accessible through a private IP (to be mapped to `api.deployjimmy.com`)
-- Returns a JSON response to demonstrate backend capability
-- Managed by **PM2** to ensure persistent uptime
-- Secured with custom **Security Group** rules to control traffic
+**URL:** [https://api.deployjimmy.com/api](https://api.deployjimmy.com/api)  
+📦 Returns JSON response from EC2-hosted Node.js backend.
 
 ---
 
 ## 🧠 Skills Demonstrated
 
-- AWS service integration (S3, Route 53, CloudFront, ACM)  
-- DNS routing and SSL management  
-- Static site deployment using best practices  
-- Secure public access configuration  
-- CDN-enabled performance optimization  
-
----
-
-## 🚧 Next Steps
-
-- [ ] Add EC2 backend for dynamic API functionality  
-- [ ] Connect `api.deployjimmy.com` to EC2  
-- [ ] Integrate monitoring with CloudWatch  
-- [ ] Automate infrastructure (Terraform – later)  
+- AWS service integration (S3, EC2, Route 53, CloudFront, ACM)  
+- Manual domain, DNS, and certificate management  
+- Secure content and API delivery using CDN  
+- Static + dynamic architecture without automation tools  
 
 ---
 
