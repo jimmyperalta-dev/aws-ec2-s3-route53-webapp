@@ -106,6 +106,12 @@ aws-ec2-s3-route53-webapp/
 
 ---
 
+## </> Development Notes
+
+This project was developed with assistance from AI tools like Claude to code and enhance documentation quality. All implementations were validated and tested by me.
+
+---
+
 ## 👤 Author
 
 **Jimmy Peralta**  
