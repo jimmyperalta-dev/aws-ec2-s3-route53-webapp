@@ -7,7 +7,9 @@
 ![EC2](https://img.shields.io/badge/EC2-FF9900?style=for-the-badge&logo=amazon-ec2&logoColor=white)
 
 🔗 **Live Demo:** [https://www.deployjimmy.com](https://www.deployjimmy.com)  
-🔗 **API Endpoint:** [https://api.deployjimmy.com/api](https://api.deployjimmy.com/api)
+🔗 **API Endpoint:** [https://api.deployjimmy.com/api](https://api.deployjimmy.com/api) (Note: This endpoint was active during development but has been decommissioned to avoid AWS Charges.)
+
+
 
 ## 📋 Project Overview
 
@@ -102,7 +104,9 @@ aws-ec2-s3-route53-webapp/
 ## 🔄 Related Projects
 
 - [EC2 Metrics Dashboard](https://github.com/jimmyperalta-dev/aws-ec2-monitoring-dashboard)
-- [Serverless Contact Form API](https://github.com/jimmyperalta-dev/aws-s3-lambda-api-contactform)
+- [Serverless Contact Form API](https://github.com/jimmyperalta-dev/aws-s3-lambda-api-contactform) (Note: This endpoint was active during development but has been decommissioned to avoid AWS charges)
+
+
 
 ---
 
