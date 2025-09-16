@@ -106,14 +106,6 @@ aws-ec2-s3-route53-webapp/
 - [EC2 Metrics Dashboard](https://github.com/jimmyperalta-dev/aws-ec2-monitoring-dashboard)
 - [Serverless Contact Form API](https://github.com/jimmyperalta-dev/aws-s3-lambda-api-contactform) (Note: This endpoint was active during development but has been decommissioned to avoid AWS charges)
 
-
-
----
-
-## </> Development Notes
-
-This project was developed with assistance from AI tools like Claude to code and enhance documentation quality. All implementations were validated and tested by me.
-
 ---
 
 ## 👤 Author
